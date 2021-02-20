@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<title>Mtdblix</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+		<link rel="stylesheet" href="./src/style/inputVoteRangeBar.css" />
+		<link rel="stylesheet" href="./src/style/normalize.css" />
+		<link rel="stylesheet" href="./src/style/style.css" />
+		<link rel="stylesheet" href="./src/style/flipcard.css" />
+		<link rel="stylesheet" href="./src/style/circle.css" />
+	</head>
+	<body>
+		<div class="toast toast__is-hidden"></div>
+
+		<header>
+			<a class="logo" href="#"><img src="./src/image/logo.png" alt="logo" /></a>
+
+			<ul class="navlink">
+				<li data-LinkId="home">Home</li>
+				<li data-LinkId="movie">Film</li>
+				<li data-LinkId="tv">TV Show</li>
+				<li data-LinkId="watchlist">Watchlist</li>
+				<li data-LinkId="favorite">Favoriti</li>
+			</ul>
+
+			<div class="search">
+				<input type="text" placeholder="Cerca..." />
+				<i class="fa fa-search"></i>
+			</div>
+		</header>
+
+		<section class="jumbotron__section"></section>
+
+		<main>
+			<section id="home" class="is_visible">
+				<div class="auth-block">
+					<button class="auth-block__get-token" type="button">Create Token</button>
+					<a href="" target="_blank" class="auth-block__link">Authentication</a>
+					<button class="auth-block__get-session" type="button" disabled>Get Account and Session Data</button>
+					<div class="auth-block__field-wrapper"></div>
+				</div>
+				<form class="movie-form">
+					<div class="movie-form__group">
+						<label for="searchTitle">Search for a movie title</label>
+						<div class="movie-form__search-block">
+							<input id="searchTitle" type="text" name="search-title" required placeholder="eg. Forrest Gump" class="movie-form__search-title" />
+							<button>Search</button>
+						</div>
+					</div>
+				</form>
+
+				<ul class="movie-list"></ul>
+				<div class="movie-no-results">
+					<h3>Sorry, no movie found.</h3>
+					<p>Try with a different search.</p>
+				</div>
+			</section>
+
+			<section id="movie">
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Film popolari</h3>
+					<div id="popular" class="carousel__wrapper-card-wrapper">
+						<div class="carousel__wrapper--cards"></div>
+						<div class="carousel__wrapper--pagination"></div>
+					</div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Film più votati</h3>
+					<div id="top_rated" class="carousel__wrapper-card-wrapper">
+						<div class="carousel__wrapper--cards"></div>
+						<div class="carousel__wrapper--pagination"></div>
+					</div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Film in Sala</h3>
+					<div id="now_playing" class="carousel__wrapper-card-wrapper">
+						<div class="carousel__wrapper--cards"></div>
+						<div class="carousel__wrapper--pagination"></div>
+					</div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Film in arrivo</h3>
+					<div id="upcoming" class="carousel__wrapper-card-wrapper">
+						<div class="carousel__wrapper--cards"></div>
+						<div class="carousel__wrapper--pagination"></div>
+					</div>
+				</section>
+			</section>
+
+			<section id="tv">
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Tv popolari</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Tv più votati</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Tv in Sala</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Tv in arrivo</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+			</section>
+
+			<section id="watchlist">
+				<section class="carousel__wrapper">
+					<h3 class="section-title">WatchList popolari</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">WatchList più votati</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">WatchList in Sala</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">WatchList in arrivo</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+			</section>
+
+			<section id="favorite">
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Favorite popolari</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Favorite più votati</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Favorite in Sala</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+				<section class="carousel__wrapper">
+					<h3 class="section-title">Favorite in arrivo</h3>
+					<div id="" class="carousel__wrapper-card-wrapper"></div>
+					<div class="carousel__wrapper--pagination"></div>
+				</section>
+			</section>
+		</main>
+
+		<script src="index.js"></script>
+	</body>
+</html>

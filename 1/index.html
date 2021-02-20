@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<title>Spitifai</title>
+	</head>
+	<body>
+		<header>
+			<div>
+				<ul class="navlink">
+					<li data-LinkId="home"><i class="fa fa-home"></i> Home</li>
+					<li data-LinkId="library"><i class="fa fa-heart"></i> Wishlist</li>
+					<li data-LinkId="favorite"><i class="fa fa-star"></i> Favoriti</li>
+					<li data-LinkId="search"><i class="fa fa-search"></i> Ricerca</li>
+					<li data-LinkId="cart"><i class="fa fa-shopping-cart"></i> Carrello</li>
+					<li data-LinkId="paid"><i class="fa fa-list"></i> My List</li>
+				</ul>
+				<form class="form">
+					<input type="text" name="Cerca" placeholder="cerca ..." />
+					<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+				</form>
+			</div>
+		</header>
+		<main>
+			<div class="sidebar"></div>
+			<section class="home">
+				<div class="title"><i class="fa fa-home"></i> Home</div>
+			</section>
+			<section class="search">
+				<div class="title"><i class="fa fa-search"></i> Ricerca</div>
+				<div class="btn-back" onclick="goBackToHome()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+				<div class="init-msg"><h3>Effettua una ricerca.</h3></div>
+			</section>
+			<section class="artistDetail">
+				<div class="title">Dettaglio artista</div>
+				<div class="btn-back" onclick="goBack()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+			</section>
+			<section class="albumDetail">
+				<div class="title">Dettaglio Album</div>
+				<div class="btn-back" onclick="goBackToAlbum()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+			</section>
+			<section class="library">
+				<div class="title"><i class="fa fa-heart"></i> Wishlist</div>
+				<div class="btn-back" onclick="goBackToHome()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+				<div class="init-msg"><h3>La lista è vuota.</h3></div>
+			</section>
+			<section class="playlist">
+				<div class="title">Playlist</div>
+				<div class="btn-back" onclick="goBackToHome()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+				<div class="init-msg"><h3>La playlist è vuota.</h3></div>
+			</section>
+			<section class="cart">
+				<div class="title"><i class="fa fa-shopping-cart"></i> Carrello</div>
+				<div class="btn-back" onclick="goBackToHome()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+				<div class="init-msg"><h3>Il carrello è vuoto.</h3></div>
+				<button class="btn-pay">Acquista</button>
+			</section>
+			<section class="paid">
+				<div class="title"><i class="fa fa-list"></i> My List</div>
+				<div class="btn-back" onclick="goBackToHome()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+				<div class="init-msg"><h3>Non hai ancora acquistato nessun album.</h3></div>
+			</section>
+			<section class="favorite">
+				<div class="btn-back" onclick="goBackToHome()"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+				<div class="init-msg"><h3>Non hai favoriti.</h3></div>
+				<div class="title"><i class="fa fa-star"></i> Favoriti</div>
+			</section>
+		</main>
+		<footer></footer>
+		<script src="./src/index.js"></script>
+	</body>
+</html>
